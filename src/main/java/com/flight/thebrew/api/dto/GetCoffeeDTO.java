@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@EqualsAndHashCode // чтобы их можно было сравнивать
+@EqualsAndHashCode
 @AllArgsConstructor
 public class GetCoffeeDTO {
     private Long id;
