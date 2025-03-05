@@ -4,7 +4,7 @@ services:
     container_name: the_brew_postgres
     restart: always
     environment:
-      - POSTGRES_DB=office
+      - POSTGRES_DB=thebrew
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
     ports:
@@ -24,7 +24,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/office
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thebrew
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: password
     ports:
