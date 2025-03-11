@@ -2,7 +2,7 @@ package com.flight.thebrew.core.service.impl;
 
 import com.flight.thebrew.api.dto.CreateCoffeeDTO;
 import com.flight.thebrew.api.dto.GetCoffeeDTO;
-import com.flight.thebrew.core.Coffee;
+import com.flight.thebrew.core.entity.Coffee;
 import com.flight.thebrew.core.repository.CoffeeRepository;
 import com.flight.thebrew.core.service.CoffeeService;
 import com.flight.thebrew.core.service.mapper.coffee.CreateCoffeeMapper;
