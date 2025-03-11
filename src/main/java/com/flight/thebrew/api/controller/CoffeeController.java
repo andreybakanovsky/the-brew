@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -32,7 +33,7 @@ public class CoffeeController {
     }
 
     @GetMapping
-    public List<GetCoffeeDTO> getByCost(@RequestParam int cost) {
+    public List<GetCoffeeDTO> getByCost(@RequestParam BigDecimal cost) {
         log.info("Get by cost= {}", cost);
         return coffeeService.getByCost(cost);
     }

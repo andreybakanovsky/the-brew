@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Setter
 @Getter
 @EqualsAndHashCode
@@ -12,6 +14,6 @@ import lombok.Setter;
 public class GetCoffeeDTO {
     private Long id;
     private String name;
-    private Integer amount;
-    private Integer cost;
+    private Integer size;
+    private BigDecimal cost;
 }

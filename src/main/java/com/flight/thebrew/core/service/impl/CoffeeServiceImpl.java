@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -28,7 +29,7 @@ public class CoffeeServiceImpl implements CoffeeService {
     }
 
     @Override
-    public List<GetCoffeeDTO> getByCost(int cost) {
+    public List<GetCoffeeDTO> getByCost(BigDecimal cost) {
         List<Coffee> coffeeList = coffeeRepository.findByCost(cost);
 
         return getCoffeeMapper.toDtos(coffeeList);
