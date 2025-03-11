@@ -1,4 +1,4 @@
-package com.flight.thebrew.core;
+package com.flight.thebrew.core.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

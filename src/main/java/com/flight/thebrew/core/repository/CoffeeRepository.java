@@ -1,6 +1,6 @@
 package com.flight.thebrew.core.repository;
 
-import com.flight.thebrew.core.Coffee;
+import com.flight.thebrew.core.entity.Coffee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
