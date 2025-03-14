@@ -29,6 +29,10 @@ public class OrderController {
 
     @PostMapping
     private GetOrderDTO create(@RequestBody CreateOrderDTO createOrderDTO) {
+        if (createOrderDTO.getOrderItems() == null) {
+            throw new IllegalArgumentException("Order items cannot be null!");
+        }
+
         return orderService.create(createOrderDTO);
     }
 

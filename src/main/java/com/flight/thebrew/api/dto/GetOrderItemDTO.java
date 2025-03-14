@@ -5,16 +5,12 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 @Setter
 @Getter
 @EqualsAndHashCode
 @AllArgsConstructor
-public class GetOrderDTO {
+public class GetOrderItemDTO {
     private Long id;
-    private String customerName;
-    private LocalDateTime createdAt;
-    private List<GetOrderItemDTO> orderItems;
+    private GetCoffeeDTO coffee;
+    private Integer quantity;
 }
