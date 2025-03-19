@@ -6,30 +6,30 @@ import com.flight.thebrew.core.entity.Coffee;
 import com.flight.thebrew.core.repository.CoffeeRepository;
 import com.flight.thebrew.core.service.mapper.coffee.CreateCoffeeMapper;
 import com.flight.thebrew.core.service.mapper.coffee.GetCoffeeMapper;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class CoffeeServiceImplTest {
-
-    CoffeeServiceImpl coffeeService;
+    @Mock
     private GetCoffeeMapper getCoffeeMapper;
+
+    @Mock
     private CreateCoffeeMapper createCoffeeMapper;
-    CoffeeRepository coffeeRepository;
 
-    @BeforeEach
-    void init() {
-        getCoffeeMapper = mock(GetCoffeeMapper.class);
-        createCoffeeMapper = mock(CreateCoffeeMapper.class);
-        coffeeRepository = mock(CoffeeRepository.class);
+    @Mock
+    private CoffeeRepository coffeeRepository;
 
-        coffeeService = new CoffeeServiceImpl(getCoffeeMapper, createCoffeeMapper, coffeeRepository);
-    }
-
+    @InjectMocks
+    private CoffeeServiceImpl coffeeService;
 
     @Test
     void testCreateCoffee() {
